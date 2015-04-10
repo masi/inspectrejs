@@ -11,7 +11,7 @@ Currently it will only make screenshots of given URLs (full page or parts).
 
 ## Usage
 
-`phantomjs inspectre.js <config.json>`
+`phantomjs inspectre.js <configuration.json> [image-directory]`
 
 ## Configuration File Format
 

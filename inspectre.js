@@ -7,17 +7,18 @@
 var system = require('system');
 var config = require('./lib/configuration.js');
 var ImageScraper = require('./node_modules/eerie-toolbox/lib/imagescraper.js');
-var configuration, queue;
+var configuration, directory, queue;
 
-if (system.args.length !== 2) {
-	console.error("Usage: <phantomjs|slimerjs> inspectre.js config-file");
+if (system.args.length < 2 || system.args.length > 3) {
+	console.error("Usage: <phantomjs|slimerjs> inspectre.js config-file [image-directory]");
 	phantom.exit(1);
 } else {
 	try {
 		configuration = config.read(system.args[1]);
+		directory = system.args[2] || '.';
 		queue = config.buildImageScraperQueue(configuration);
 
-		ImageScraper.build().processQueue(
+		ImageScraper.build().setImageDirectory(directory).processQueue(
 			queue,
 			function (context) {
 				phantom.exit();
