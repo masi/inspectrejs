@@ -1,0 +1,32 @@
+{
+	"name": "inspectrejs",
+	"version": "0.0.1",
+	"description": "A web layout regression testing tool for PhantomJS and SlimerJS.",
+	"keywords": [
+		"phantomjs",
+		"slimerjs",
+		"screenshot",
+		"cli"
+	],
+	"author": {
+		"name": "Martin Kutschker",
+		"email": "mkutschker-phantomjs@yahoo.com"
+	},
+	"homepage": "https://github.com/masi/inspectrejs",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/masi/inspectrejs.git"
+	},
+	"bugs": {
+		"url": "https://github.com/masi/inspectrejs/issues"
+	},
+	"dependencies": {
+		"eerie-toolbox": "*",
+		"URIjs": ">=1.12"
+	},
+	"engines": {
+		"phantomjs": "*",
+		"slimerjs": "*"
+	}
+}
