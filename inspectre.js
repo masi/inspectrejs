@@ -6,7 +6,7 @@
 
 var system = require('system');
 var config = require('./lib/configuration.js');
-var ImageScraper = require('./../inspectre/node_modules/eerie-toolbox/lib/imagescraper.js');
+var ImageScraper = require('./node_modules/eerie-toolbox/lib/imagescraper.js');
 var configuration, queue;
 
 if (system.args.length !== 2) {
