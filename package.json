@@ -1,6 +1,6 @@
 {
 	"name": "inspectrejs",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "A web layout regression testing tool for PhantomJS and SlimerJS.",
 	"keywords": [
 		"phantomjs",
@@ -22,7 +22,7 @@
 		"url": "https://github.com/masi/inspectrejs/issues"
 	},
 	"dependencies": {
-		"eerie-toolbox": "*",
+		"eerie-toolbox": ">=0.0.2",
 		"URIjs": ">=1.12"
 	},
 	"engines": {
