@@ -16,9 +16,10 @@ if (system.args.length < 2) {
 		Command = require('./lib/cmd/' + command + '.js');
 	} catch (error) {
 		console.log('Unknown command "' + command + '".');
-		phantom.exit(1); // asynchronous in SlimerJS
+		phantom.exit(1);
 	}
-	if (Command) {
-		Command.execute();
-	}
+}
+
+if (Command) {
+	Command.execute(system.args.slice(2));
 }

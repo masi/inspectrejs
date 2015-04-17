@@ -24,7 +24,8 @@
 	"dependencies": {
 		"eerie-toolbox": ">=0.0.2",
 		"URIjs": ">=1.12",
-		"resemblejs": ">=1.2"
+		"resemblejs": ">=1.2",
+		"minimist": ">=1"
 	},
 	"engines": {
 		"phantomjs": "*",
