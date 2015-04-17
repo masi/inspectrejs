@@ -5,32 +5,15 @@
 'use strict';
 
 var system = require('system');
-var config = require('./lib/configuration.js');
-var ImageScraper = require('./node_modules/eerie-toolbox/lib/imagescraper.js');
-var configuration, directory, queue;
+var ScraperCommand;
 
 if (system.args.length < 2 || system.args.length > 3) {
 	console.error("Usage: <phantomjs|slimerjs> inspectre.js config-file [image-directory]");
 	phantom.exit(1);
 } else {
 	try {
-		configuration = config.read(system.args[1]);
-		directory = system.args[2] || '.';
-		queue = config.buildImageScraperQueue(configuration);
-
-		ImageScraper.build().setImageDirectory(directory).processQueue(
-			queue,
-			function (context) {
-				phantom.exit();
-			},
-			function (item, error, context) {
-				console.error('LOAD ERROR: ' + item.url);
-			},
-			function (item, error, context) {
-				console.error('ERROR: ' + error.message);
-				phantom.exit(1);
-			}
-		);
+		ScraperCommand = require('./lib/cmd/scrape.js');
+		ScraperCommand.execute();
 	} catch (error) {
 		console.error('ERROR: ' + error.message);
 		phantom.exit(1);
