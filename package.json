@@ -23,7 +23,8 @@
 	},
 	"dependencies": {
 		"eerie-toolbox": ">=0.0.2",
-		"URIjs": ">=1.12"
+		"URIjs": ">=1.12",
+		"resemblejs": ">=1.2"
 	},
 	"engines": {
 		"phantomjs": "*",
