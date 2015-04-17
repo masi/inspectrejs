@@ -5,17 +5,20 @@
 'use strict';
 
 var system = require('system');
-var ScraperCommand;
+var Command, command;
 
-if (system.args.length < 2 || system.args.length > 3) {
-	console.error("Usage: <phantomjs|slimerjs> inspectre.js config-file [image-directory]");
+if (system.args.length < 2) {
+	console.error("Usage: <phantomjs|slimerjs> inspectre.js <command>");
 	phantom.exit(1);
 } else {
+	command = system.args[1]; // @todo sanitise input
 	try {
-		ScraperCommand = require('./lib/cmd/scrape.js');
-		ScraperCommand.execute();
+		Command = require('./lib/cmd/' + command + '.js');
 	} catch (error) {
-		console.error('ERROR: ' + error.message);
-		phantom.exit(1);
+		console.log('Unknown command "' + command + '".');
+		phantom.exit(1); // asynchronous in SlimerJS
+	}
+	if (Command) {
+		Command.execute();
 	}
 }
