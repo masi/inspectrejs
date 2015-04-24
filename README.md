@@ -30,9 +30,9 @@ phantomjs inspectre.js compare
 	[ --output-directory=<image-directory> ]
 ```
 
-## Configuration File Format
+## Configuration File Format (JSON)
 
-``` json
+``` javascript
 {
 	"baseUrl": "<url>",
 	"paths": [
