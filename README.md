@@ -16,14 +16,17 @@ Currently it will make screenshots of given URLs (full page or parts) and compar
 ### Creating Screenshots
 
 ```
-phantomjs inspectre.js scrape --config-file=<configuration.json>
+phantomjs inspectre.js scrape
+	--config-file=<configuration.json>
 	[ --output-directory=<image-directory> ]`
 ```
 
 ### Comparing Screenshots
 
 ```
-phantomjs inspectre.js compare --baseline-directory=<image-directory> --sample-directory=<image-director>
+phantomjs inspectre.js compare
+	--baseline-directory=<image-directory>
+	--sample-directory=<image-director>
 	[ --output-directory=<image-directory> ]`
 ```
 
@@ -42,11 +45,11 @@ phantomjs inspectre.js compare --baseline-directory=<image-directory> --sample-d
 			"path": "<url-path>",
 			"selectors": [
 				"<css-selector>",
-				...
+				/* ... */
 			]
 		},
 		"<url>",
-		...
+		/* ... */
 	]
 }
 ```
