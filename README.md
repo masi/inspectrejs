@@ -9,6 +9,16 @@ The code runs directly in PhantomJS or SlimerJS, it is not meant for [Node.js](h
 Eventually inspectreJS is to be used with a continuous integration server to compare screenshots, CSS styles and DOM elements.
 Currently it will make screenshots of given URLs (full page or parts) and compare them (for now PhantomJS only).
 
+## Installation
+
+### NPM
+
+`npm install inspectrejs`
+
+### GIT
+
+`git clone https://github.com/masi/inspectrejs.git`
+
 ## Usage
 
 `phantomjs inspectre.js <command>`
@@ -43,12 +53,12 @@ phantomjs inspectre.js compare
 		},
 		{
 			"path": "<url-path>",
-			"selectors": [ // multiple 
+			"selectors": [ // multiple elements 
 				"<css-selector>"
 				/* , ... */
 			]
 		},
-		"<url>" // full page (absoulte URL)
+		"<url>" // full page (absolute URL)
 		/* , ... */
 	]
 }
