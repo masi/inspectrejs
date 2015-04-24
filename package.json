@@ -6,7 +6,12 @@
 		"phantomjs",
 		"slimerjs",
 		"screenshot",
-		"cli"
+		"screengrab",
+		"image",
+		"difference",
+		"diff",
+		"comparison",
+		"compare"
 	],
 	"author": {
 		"name": "Martin Kutschker",
@@ -22,10 +27,11 @@
 		"url": "https://github.com/masi/inspectrejs/issues"
 	},
 	"dependencies": {
-		"eerie-toolbox": ">=0.0.2",
+		"eerie-toolbox": ">=0.0.3",
 		"URIjs": ">=1.12",
 		"resemblejs": ">=1.2",
-		"minimist": ">=1"
+		"minimist": ">=1",
+		"function-bind": ">=1"
 	},
 	"engines": {
 		"phantomjs": "*",
