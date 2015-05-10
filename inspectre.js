@@ -15,7 +15,7 @@ if (system.args.length < 2) {
 	try {
 		Command = require('./lib/cmd/' + command + '.js');
 	} catch (error) {
-		console.log('Unknown command "' + command + '".');
+		console.error('Unknown command "' + command + '".');
 		phantom.exit(1);
 	}
 }
